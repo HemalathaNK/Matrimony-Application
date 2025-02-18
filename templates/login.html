@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MatrimonyLogin</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'img/dd.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #8b008b;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="login-form">
+        <h1>Login</h1>
+
+
+
+        <form method="post">
+            {% csrf_token %}
+            <label for="txtmail"><strong>Email Id</strong></label>
+            <input type="email" name="txtmail" id="txtmail" placeholder="Enter your email" required><br>
+
+            <label for="txtpswd"><strong>Password</strong></label>
+            <input type="password" name="txtpswd" id="txtpswd" placeholder="Enter your password" required><br>
+
+            <input type="submit" value="Login"><br>
+        </form>
+        <p><strong>New user</strong>
+            &nbsp;<a href="/signup/"><strong>Sign UP</strong></a>  &nbsp; &nbsp;
+            <a style="color:#740C7F" href="{% url 'password_reset' %}"><strong>Forgot Password?</strong></a></p>
+
+    </div>
+</body>
+</html>

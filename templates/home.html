@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+  <h1 style="color:#A72C61"><strong>Find your forever love</strong></h1>
+</center>
+
+<div class="image-container">
+  <div class="row">
+    {% for profile in profiles %}
+      <div class="col-md-4">
+        <div class="card" style="margin-bottom: 20px; padding: 15px; border: 4px solid #8b008b; border-radius: 10px;">
+          <!-- Display Profile Picture -->
+          <div style="width: 150px; height: 150px; overflow: hidden; border-radius: 5px;">
+            {% if profile.profile_picture %}
+              <img src="{{ profile.profile_picture.url }}" alt="{{ profile.name }}'s Picture" class="profile-image" id="profile-img-{{ profile.email }}" style="width: 100%; height: object-fit: cover; cursor: pointer;">
+            {% endif %}
+          </div>
+
+          <div style="margin-top: 10px;">
+            <h3><strong>{{ profile.name }}</strong></h3>
+            <p><strong>Age:</strong> {{ profile.age }}</p>
+            <p><strong>Job:</strong> {{ profile.job_details }}</p>
+            <a href="details/{{profile.id}}" class="btn btn-primary">Details</a>
+          </div>
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

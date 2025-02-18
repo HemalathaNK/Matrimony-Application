@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+<h1 style="color:#A72C61"><strong>Find your forever love</strong></h1>
+</center>
+
+<form method="post">
+
+
+<div class="image-container">
+  <div class="row">
+    {% for groom in grooms %}
+      <div class="col-md-4">
+        <div class="card" style="margin-bottom: 20px; padding: 15px; border: 4px solid #8b008b; border-radius: 10px;">
+          <!-- Display Profile Picture -->
+          <div style="width: 150px; height: 150px; overflow: hidden; border-radius: 5px;">
+          {% if groom.profile_picture %}
+            <img src="{{ groom.profile_picture.url }}" alt="{{ groom.name }}'s Picture"
+                 style="width: 100%; height: object-fit: cover;">
+          {% else %}
+            <img src="https://via.placeholder.com/150" alt="Default Profile Picture"
+                 style="width: 100%; height: object-fit: cover;">
+          {% endif %}
+          </div>
+
+          <!-- Display Person Details -->
+          <div style="margin-top: 10px;">
+            <h3><strong>{{ groom.name }}</strong></h3>
+            <p><strong>Age:</strong> {{ groom.age }}</p>
+            <p><strong>Job Details:</strong> {{ groom.job_details }}</p>
+            <a href="g_details/{{groom.id}}" class="btn btn-primary">Details</a>
+
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</form>
+
+{% endblock %}
+
+
+
+

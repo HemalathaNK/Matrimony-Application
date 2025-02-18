@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<style>
+  body {
+    background-image: url("{% static 'img/a1.jpeg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+  }
+</style>
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+<center>
+  <h1 style="color:#A72C61"><strong>Welcome to {{groom.name}}'s profile</strong></h1>
+</center>
+
+<div class="container">
+  <div class="profile-section">
+    <div class="profile-picture-box">
+      {% if groom.profile_picture %}
+        <img src="{{ groom.profile_picture.url }}" alt="{{ groom.name }}'s Picture" onclick="enlargeImage(this)">
+      {% else %}
+        <img src="https://via.placeholder.com/150" alt="Default Profile Picture" onclick="enlargeImage(this)">
+      {% endif %}
+    </div>
+
+    <div style="position: absolute; top: 90px; left: 20px; text-align: center; width: 150px;">
+      <h3 style="margin-top: 10px;"><strong>{{ groom.name }}</strong></h3>
+       <div class="video">
+        {% if groom.video %}
+          <video width="190" height="190"  controls autoplay muted>
+          <source src="{{ groom.video.url }}" type="video/mp4">
+          </video>
+        {% else %}
+        <p>No video uploaded.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="profile-info">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div class="col-md-6">
+          <div><strong>Email:</strong> {{ groom.email }}</div>
+          <div><strong>Mobile:</strong> {{ groom.mobile }}</div>
+          <div><strong>Age:</strong> {{ groom.age }}</div>
+          <div><strong>Height:</strong> {{ groom.height }}</div>
+          <div><strong>Gender:</strong> {{ groom.gender }}</div>
+          <div><strong>Marital Status:</strong> {{ groom.marital_status }}</div>
+        </div>
+        <div class="col-md-6">
+          <div><strong>Religion:</strong> {{ groom.religion }}</div>
+          <div><strong>Mother Tongue:</strong> {{ groom.mother_tongue }}</div>
+          <div><strong>Family Type:</strong> {{ groom.family_type }}</div>
+          <div><strong>Job Details:</strong> {{ groom.job_details }}</div>
+          <div><strong>Salary:</strong> {{ groom.salary }}</div>
+          <div><strong>Address:</strong> {{ groom.address }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'js/image_enlarge.js' %}">
+
+</script>
+
+{% endblock %}

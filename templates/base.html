@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MatrimonyAplication</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        {% block extra_css %}
+
+      .navbar {
+        background-color:#7e0a77;
+        display: flex;
+        justify-content:left;
+
+      }
+
+      .navbar-inverse .navbar-nav>li>a {
+        color: lightblue;
+    }
+
+      .navbar-header .navbar-brand {
+        color: #EABC22;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+
+      .nav {
+        display: flex;
+        color:white;
+      }
+
+      .nav > li > a {
+      color:#ffffff;
+      font-size:28px;
+      font-weight:bold;
+      padding:14px 55px
+      }
+
+      li {
+        font-size: 15px;
+
+
+      }
+
+      .nav > li > a hover {
+      color:red;
+
+      }
+
+
+    .search_filters {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flx-start;
+        gap: 8px;
+        justify-content: flex-start;
+
+    }
+
+
+    .search_filters input[type="text"] {
+        width: 200px !important;
+        padding: 10px;
+        border-radius: 5px;
+        background-color:#f8f8ff;
+        border: 1px solid #6c8990;
+
+
+    }
+
+
+    .search_filters select {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #6c8990;
+        background-color: #f8f8ff;
+        width: 140px;
+
+    }
+
+
+    .search_filters button {
+        padding: 8px 15px;
+        border: none;
+        background-color:#337ab7;
+        border-color:#2e6da4;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .search_filters button:hover {
+        background-color:#23527c;
+        color: white;
+    }
+
+
+        {% endblock %}
+    </style>
+</head>
+<body>
+{% include 'navbar.html'%}
+
+{% block content %}
+
+{% endblock %}
+
+{% include 'footer.html' %}
+
+</body>
+</html>

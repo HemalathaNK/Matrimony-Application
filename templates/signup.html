@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatrimonySignup</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url("{% static 'img/bb.jpg' %}") no-repeat center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #090808;
+        }
+
+    </style>
+</head>
+<body>
+<div class="signup-form">
+    <h1>Register</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+         {% if msg %}
+        <h3 style="color:#F30D0D">Email already exists</h3>
+        {% endif %}
+
+        <label><strong>Name</strong></label>
+        <input type="text" name="txtname1"  placeholder="Enter your name" required>
+
+        <label><strong>Mobile</strong></label>
+        <input type="text" name="txtmob" placeholder="Enter your mobile number" required>
+
+        <label><strong>Age</strong></label>
+        <input type="number" step="0.01" name="txtage" placeholder="Enter your age" required>
+
+        <label><strong>Gender</strong></label>
+        <div class="radio-box">
+            <input type="radio" value="Male" name="gender">Male
+            <input type="radio" value="Female" name="gender">Female
+            <input type="radio" name="gender">Other
+        </div>
+
+        <label><strong>Height</strong></label>
+        <input type="text" name="height" placeholder="Enter your height" required>
+
+        <label><strong>Marital Status</strong></label>
+        <select name="maritalStatus" required>
+            <option>--select--</option>
+            <option>Never Married</option>
+            <option>Widowed</option>
+            <option>Divorced</option>
+            <option>Awaiting Divorce</option>
+        </select>
+
+        <label><strong>Religion</strong></label>
+        <select name="religion" required>
+            <option>--select--</option>
+            <option>Hindu</option>
+            <option>Christian</option>
+            <option>Muslim</option>
+            <option>Jain</option>
+            <option>Buddhist</option>
+            <option>Sikh</option>
+            <option>Parsi</option>
+            <option>No Religion</option>
+        </select>
+
+        <label><strong>Mother Tongue</strong></label>
+        <select name="motherTongue" required>
+            <option value="" disabled selected>--select--</option>
+            <option>Kannada</option>-->
+            <option>Telugu</option>
+            <option>Tamil</option>
+            <option>Malayalam</option>
+            <option>Hindi</option>
+            <option>Bengali</option>
+            <option>Gujarati</option>
+            <option>Assamese</option>
+            <option>Bhojpuri</option>
+            <option>Konkani</option>
+            <option>Manipuri</option>
+            <option>Marwari</option>
+            <option>Nepali</option>
+            <option>Punjabi</option>
+            <option>Tulu</option>
+            <option>Urdu</option>
+            <option>Sanskrit</option>
+            <option>Rajasthani</option>
+            <option>Kashmiri</option>
+            <option>English</option>
+            <option>French</option>
+            <option>Other</option>
+        </select>
+
+        <label><strong>Family Type</strong></label>
+        <div class="radio-box">
+            <input type="radio" value="Joint" name="familyType">Joint
+            <input type="radio" value="Nuclear" name="familyType">Nuclear
+        </div>
+
+        <label><strong>Job Details</strong></label>
+        <select id="jobDetails" name="jobDetails" required>
+            <option>--select your job category--</option>
+            <option>Agriculture</option>
+            <option>Business And Entrepreneurship </option>
+            <option>Construction And Infrastructure</option>
+            <option>Doctor</option>
+            <option>Defence And Security</option>
+            <option>Education</option>
+            <option>Engineering</option>
+            <option>Event Management</option>
+            <option>Finance And Banking</option>
+            <option>Freelance And Self-Employed</option>
+            <option>Government And Public Sector</option>
+            <option>Healthcare</option>
+            <option>IT And Software</option>
+            <option>Media And Entertainment</option>
+            <option>Real Estate</option>
+            <option>Sales And Marketing</option>
+            <option>Science And Research </option>
+            <option>Sports And Fitness</option>
+            <option>Telecommunication</option>
+            <option>Other</option>
+
+
+        </select>
+
+        <label><strong>Salary</strong></label>
+        <select id="salary" name="salary" required>
+            <option>--Select salary range--</option>
+            <option value="" disabled selected>--Select salary range--</option>
+            <option value="below 1L">Below ₹1,00,000</option>
+            <option value="1L To 2.5L">₹1,00,000 - ₹2,50,000</option>
+            <option value="2.5 LTo 5L">₹2,50,000 - ₹5,00,000</option>
+            <option value="5L To 7.5L">₹5,00,000 - ₹7,50,000</option>
+            <option value="7.5 LTo 10L">₹7,50,000 - ₹10,00,000</option>
+            <option value="10L To 15L">₹10,00,000 - ₹15,00,000</option>
+            <option value="15L To 20L">₹15,00,000 - ₹20,00,000</option>
+            <option value="20L To 30L">₹20,00,000 - ₹30,00,000</option>
+            <option value="30L To 50L">₹30,00,000 - ₹50,00,000</option>
+            <option value="above 50L">Above ₹50,00,000</option>
+            <option value="preferNotDisclose">Prefer not to disclose</option>
+
+        </select>
+
+        <label><strong>Address</strong></label>
+        <input type="text" name="txtaddrs" placeholder="Enter your address" required>
+
+        <label><strong>Email ID</strong></label>
+        <input type="text" name="txtmail1" placeholder="Enter your email" required>
+
+        <label><strong>Password</strong></label>
+        <input type="password" name="pswd" placeholder="Enter your password">
+
+        <label><strong>Photo</strong></label>
+        <input type="file" name="photo" accept=".png,.jpeg,.jpg" required>
+
+        <strong style="color:#b22852;">Vedio</strong>
+        <input type="file" name="video" accept="video/*" >
+
+        <input type="submit" value="Sign Up">
+
+    </form>
+    <div class="login-link">
+        <strong>Existing User</strong>&nbsp; <a href="/">Login</a>
+    </div>
+</div>
+<script src="{% static 'js/passwordValidation.js' %}"></script>
+</body>
+</html>
+

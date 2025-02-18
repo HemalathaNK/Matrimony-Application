@@ -1,0 +1,87 @@
+ h1 {
+            text-align: center;
+            color: #c92456;
+            font-size: 2.5rem;
+        }
+
+        .signup-form {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="password"],
+        form input[type="file"],
+        form select {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            color: #000;
+            outline: none;
+        }
+
+        form input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        .radio-box {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        form label {
+            font-weight: bold;
+            color: #b22852;
+            display: block;
+            margin-top: 10px;
+        }
+
+        form input[type="submit"] {
+            background: #c92456;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+
+        form input[type="submit"]:hover {
+            background: linear-gradient(to right, #c92456,#df386b );
+        }
+
+        a {
+            color: #0000ff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        a:hover {
+            color: #0B23D5;
+
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: underline;
+        }

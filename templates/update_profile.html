@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<style>
+  body {
+    background-image: url("{% static 'img/yy.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin
+    }
+</style>
+<div class="container">
+    <h1 style="color:#A72C61"><strong>Edit your Profile here</strong></h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"  style=" width: 150px; height:50px ;" class="btn btn-primary">Save Changes</button>
+        <button class="btn btn-danger" style=" width: 100px; height:50px ;">
+        <a href="{% url 'profile' %}" style="color:white" class="btn btn-secondary">Cancel</a></button>
+    </form>
+</div>
+{% endblock %}

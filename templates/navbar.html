@@ -1,0 +1,145 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <em class="navbar-brand">Matrimony Application</em>
+    </div>
+    <ul class="nav navbar-nav">
+      {% if request.path == '/home/' %}
+        <li class="nav"><a href="/home/">Home</a></li>
+      {% elif request.path == '/brides_profiles/' %}
+        <li class="nav"><a href="/brides_profiles/">Home</a></li>
+      {% elif request.path == '/grooms_profiles/' %}
+        <li class="nav"><a href="/grooms_profiles/">Home</a></li>
+        {% else %}
+        {% if '/brides_profiles/' in request.META.HTTP_REFERER %}
+        <li class="nav"><a href="/brides_profiles/">Home</a></li>
+        {% elif '/grooms_profiles/' in request.META.HTTP_REFERER %}
+        <li class="nav"><a href="/grooms_profiles/">Home</a></li>
+        {% elif '/home/' in  request.META.HTTP_REFERER %}
+        <li class="nav"><a href="/home/">Home</a></li>  <!-- Default Home link -->
+        {% endif %}
+
+      {% endif %}
+
+      <li class="nav"><a href="/profile/">Profile</a></li>
+      <li class="nav"><a href="/">Logout</a></li>
+      <li class="navbar-brand" >
+        <p style="color:#EABC22; font-size:20px; text-align:right;" ><strong>Logged in as - {{ user.username }}</strong></p>
+      </li>
+    </ul>
+
+    <!-- Search -->
+      {% if request.path == '/home/' or request.path == '/brides_profiles/' or request.path == '/grooms_profiles/' %}
+      <form method="GET" action="{% url 'search_profiles' %}" class="navbar-form navbar-right">
+          <div class="search_filters">
+              <div class="input-group">
+                  <input type="text" name="q" class="form-control" placeholder="Search by name, age, height, or address">
+              </div>
+
+      <!-- Filters -->
+              <select class="form-control" name="job_details">
+                  <option value="">Job</option>
+                  <option>Agriculture</option>
+                  <option>Business And Entrepreneurship </option>
+                  <option>Construction And Infrastructure</option>
+                  <option>Doctor</option>
+                  <option>Defence And Security</option>
+                  <option>Education</option>
+                  <option>Engineering</option>
+                  <option>Event Management</option>
+                  <option>Finance And Banking</option>
+                  <option>Freelance And Self-Employed</option>
+                  <option>Government And Public Sector</option>
+                  <option>Healthcare</option>
+                  <option>IT And Software</option>
+                  <option>Media And Entertainment</option>
+                  <option>Real Estate</option>
+                  <option>Sales And Marketing</option>
+                  <option>Science And Research </option>
+                  <option>Sports And Fitness</option>
+                  <option>Telecommunication</option>
+                  <option>Other</option>
+              </select>
+
+              <select class="form-control" name="salary">
+                  <option value="">Salary</option>
+                  <option value="below 1L">Below ₹1,00,000</option>
+                  <option value="1L To 2.5L">₹1,00,000 - ₹2,50,000</option>
+                  <option value="2.5 LTo 5L">₹2,50,000 - ₹5,00,000</option>
+                  <option value="5L To 7.5L">₹5,00,000 - ₹7,50,000</option>
+                  <option value="7.5 LTo 10L">₹7,50,000 - ₹10,00,000</option>
+                  <option value="10L To 15L">₹10,00,000 - ₹15,00,000</option>
+                  <option value="15L To 20L">₹15,00,000 - ₹20,00,000</option>
+                  <option value="20L To 30L">₹20,00,000 - ₹30,00,000</option>
+                  <option value="30L To 50L">₹30,00,000 - ₹50,00,000</option>
+                  <option value="above 50L">Above ₹50,00,000</option>
+              </select>
+
+              <select class="form-control" name="marital_status">
+                  <option value="">Marital Status</option>
+                  <option>Never Married</option>
+                  <option>Widowed</option>
+                  <option>Divorced</option>
+                  <option>Awaiting Divorce</option>
+              </select>
+
+              <select class="form-control" name="religion">
+                  <option value="">Religion</option>
+                  <option>Hindu</option>
+                  <option>Christian</option>
+                  <option>Muslim</option>
+                  <option>Jain</option>
+                  <option>Buddhist</option>
+                  <option>Sikh</option>
+                  <option>Parsi</option>
+                  <option>No Religion</option>
+              </select>
+
+              <select class="form-control" name="mother_tongue">
+                  <option value="">Mother Tongue</option>
+                  <option>Kannada</option>
+                  <option>Telugu</option>
+                  <option>Tamil</option>
+                  <option>Malayalam</option>
+                  <option>Hindi</option>
+                  <option>Bengali</option>
+                  <option>Gujarati</option>
+                  <option>Assamese</option>
+                  <option>Bhojpuri</option>
+                  <option>Konkani</option>
+                  <option>Manipuri</option>
+                  <option>Marwari</option>
+                  <option>Nepali</option>
+                  <option>Punjabi</option>
+                  <option>Tulu</option>
+                  <option>Urdu</option>
+                  <option>Sanskrit</option>
+                  <option>Rajasthani</option>
+                  <option>Kashmiri</option>
+                  <option>English</option>
+                  <option>French</option>
+                  <option>Other</option>
+              </select>
+
+              <select class="form-control" name="family_type">
+                  <option value="">Family Type</option>
+                  <option value="Joint">Joint</option>
+                  <option value="Nuclear">Nuclear</option>
+              </select>
+
+              <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default">Search</button>
+              </span>
+          </div>
+      </form>
+      {% endif %}
+  </div>
+</nav>
+
+
+
+
+
+
+
+
