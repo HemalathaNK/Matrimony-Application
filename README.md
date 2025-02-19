@@ -56,9 +56,9 @@ Install the required dependencies using pip:
 
 4. **Create Django Project & App:**
 
-       django-admin startproject ProjectName`
+       `django-admin startproject ProjectName``
    
-       django-admin startapp AppName`
+       `django-admin startapp AppName``
 
 6. **Set up the database:**
 
