@@ -44,41 +44,40 @@ Install the required dependencies using pip:
 
 1. **Install Virtual Environment:**
 
-`pip install virtualenv`
+      `pip install virtualenv`
 
 2. **Create a Virtual Environment:**
 
-`virtualenv venv`
+      `virtualenv venv`
 
 3. **Activate the Virtual Environment:**
 
-`venv\Scripts\activate`
+      `venv\Scripts\activate`
 
 4. **Create Django Project & App:**
 
-`django-admin startproject ProjectName
-django-admin startapp AppName`
+      `django-admin startproject ProjectName
+       django-admin startapp AppName`
 
 5. **Set up the database:**
 
-Create a MySQL database named MatrimonyDB in MySQL Workbench.
-
-Update settings.py with database credentials.
+      Create a MySQL database named MatrimonyDB in MySQL Workbench.
+      Update settings.py with database credentials.
 
 6. **Apply Migrations:**
 
-`python manage.py makemigrations
-python manage.py migrate
-`
-7. **Create a Superuser (For Admin Access):**
+    `python manage.py makemigrations
+    python manage.py migrate`
+   
+8. **Create a Superuser (For Admin Access):**
 
-`python manage.py createsuperuser`
+      `python manage.py createsuperuser`
 
 8. **Run the Server:**
 
-`python manage.py runserver`
+      `python manage.py runserver`
 
-The application will be accessible at: ` http://127.0.0.1:8000`
+      The application will be accessible at: ` http://127.0.0.1:8000`
 
 ## Function Explanations
 
@@ -88,41 +87,41 @@ The application maps functions in `views.py` via `urls.py`:
 
 2. `signup_fun`: Handles user registration.
 
-3. video_view: Likely related to video functionality.
+3. `video_view`: Likely related to video functionality.
 
-4. home_page: Displays all registered users.
+4. `home_page`: Displays all registered users.
 
-5. brides_profiles: Displays only female profiles (photo, name, age, job, and a "See Details" button).
+5. `brides_profiles`: Displays only female profiles (photo, name, age, job, and a "See Details" button).
 
-6. grooms_profiles: Displays only male profiles (photo, name, age, job, and a "See Details" button).
+6. `grooms_profiles`: Displays only male profiles (photo, name, age, job, and a "See Details" button).
 
-7. bride_details: Shows full details of a bride when clicked from brides_profiles.
+7. `bride_details`: Shows full details of a bride when clicked from brides_profiles.
 
-8. groom_details: Shows full details of a groom when clicked from grooms_profiles.
+8. `groom_details`: Shows full details of a groom when clicked from grooms_profiles.
 
-9. see_details: Shows complete profile details when accessed from home_page.
+9. `see_details`: Shows complete profile details when accessed from home_page.
 
-10. profile_fun: Allows the currently logged-in user to access, update, and delete their profile.
+10. `profile_fun`: Allows the currently logged-in user to access, update, and delete their profile.
 
-11. update_profile: Updates the logged-in user's profile.
+11. `update_profile`: Updates the logged-in user's profile.
 
-12. delete_profile: Deletes the logged-in user's profile.
+12. `delete_profile`: Deletes the logged-in user's profile.
 
-13. search_profiles: Provides search functionality for profiles.
+13. `search_profiles`: Provides search functionality for profiles.
 
-14. logout_fun: Logs out the user.
+14. `logout_fun`: Logs out the user.
 
-Additional Notes
+## Additional Notes
 
-The project uses Django ORM for database operations.
+* The project uses Django ORM for database operations.
 
-It also utilizes Django Template Language (DTL), also known as Jinja language.
+* It also utilizes Django Template Language (DTL), also known as Jinja language.
 
-Ensure you have Django installed before running the project.
+* Ensure you have Django installed before running the project.
 
-If any errors occur, check the official documentation for troubleshooting.
+* If any errors occur, check the official documentation for troubleshooting.
 
-Secure user data by configuring Django settings properly.
+* Secure user data by configuring Django settings properly.
 
 ## Conclusion
 
