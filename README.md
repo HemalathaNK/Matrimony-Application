@@ -57,19 +57,22 @@ Install the required dependencies using pip:
 4. **Create Django Project & App:**
 
       `django-admin startproject ProjectName
+   
        django-admin startapp AppName`
 
-5. **Set up the database:**
+6. **Set up the database:**
 
       Create a MySQL database named MatrimonyDB in MySQL Workbench.
+   
       Update settings.py with database credentials.
 
-6. **Apply Migrations:**
+8. **Apply Migrations:**
 
     `python manage.py makemigrations
+   
     python manage.py migrate`
    
-8. **Create a Superuser (For Admin Access):**
+10. **Create a Superuser (For Admin Access):**
 
       `python manage.py createsuperuser`
 
@@ -86,8 +89,6 @@ The application maps functions in `views.py` via `urls.py`:
 1. `login_fun`: Handles user login by fetching registered data from the database. Redirects males to the female profiles page and females to the male profiles page.
 
 2. `signup_fun`: Handles user registration.
-
-3. `video_view`: Likely related to video functionality.
 
 4. `home_page`: Displays all registered users.
 
