@@ -1,103 +1,122 @@
-Matrimony Application
+# Matrimony Application
 
-Overview
+## Overview
 
 This project is a Matrimony Application built using Python and Django for backend operations and HTML, CSS, and JavaScript for the frontend. The application allows users to register, create profiles, search for potential matches, and communicate securely.
 
-Technologies Used
+## Technologies Used
 
-Backend: Python, Django
+__Backend:__ Python, Django
 
-Frontend: HTML, CSS, JavaScript
+__Frontend:__ HTML, CSS, JavaScript
 
-Database: MySQL
+__Database:__ MySQL (via MySQL Workbench)
 
-IDE: VS Code
+__IDE:__ VS Code
 
-Features
+## Features
 
-User Registration & Login: Secure authentication using Django's built-in authentication system.
+* **User Registration & Login:** Secure authentication using Django's built-in authentication system.
 
-Profile Management: Users can create and update their profiles with personal details.
+* **Profile Management:** Users can create and update their profiles with personal details.
 
-Search Functionality: Users can search for matches based on specific filters.
+* **Search Functionality:** Users can search for matches based on specific filters.
 
-Match Recommendations: Intelligent suggestions based on user preferences.
+* **Admin Dashboard:** Admins can manage user profiles and monitor activities.
 
-Secure Communication: Users can communicate through a secure messaging system.
+## Requirements
 
-Admin Dashboard: Admins can manage user profiles and monitor activities.
+### Software
 
-Requirements
+**Python 3.x:** Required to run the Django server.
 
-Software
+**VS Code:** For coding and development.
 
-Python 3.x: Required to run the Django server.
+**MySQL Workbench:** To manage MySQL database.
 
-VS Code: For coding and development.
-
-XAMPP: To manage MySQL database.
-
-Libraries
+### Libraries & Packages
 
 Install the required dependencies using pip:
 
-pip install django mysql-connector-python
+`pip install django pillow mysqlclient virtualenv`
 
-Installation & Setup
+### Installation & Setup
 
-Clone the repository:
+1. **Install Virtual Environment:**
 
-git clone https://github.com/your-repo/matrimony-app.git
-cd matrimony-app
+`pip install virtualenv`
 
-Set up a virtual environment (Recommended):
+2. **Create a Virtual Environment:**
 
-python -m venv venv
-source venv/bin/activate  # For Linux/macOS
-venv\Scripts\activate  # For Windows
+`virtualenv venv`
 
-Install dependencies:
+3. **Activate the Virtual Environment:**
 
-pip install -r requirements.txt
+`venv\Scripts\activate`
 
-Set up the database:
+4. **Create Django Project & App:**
 
-Create a MySQL database named matrimony_db.
+`django-admin startproject ProjectName
+django-admin startapp AppName`
+
+5. **Set up the database:**
+
+Create a MySQL database named MatrimonyDB in MySQL Workbench.
 
 Update settings.py with database credentials.
 
-Apply Migrations:
+6. **Apply Migrations:**
 
+`python manage.py makemigrations
 python manage.py migrate
+`
+7. **Create a Superuser (For Admin Access):**
 
-Create a Superuser (For Admin Access):
+`python manage.py createsuperuser`
 
-python manage.py createsuperuser
+8. **Run the Server:**
 
-Run the Server:
+`python manage.py runserver`
 
-python manage.py runserver
+The application will be accessible at: ` http://127.0.0.1:8000`
 
-The application will be accessible at: http://127.0.0.1:8000
+## Function Explanations
 
-Function Explanations
+The application maps functions in `views.py` via `urls.py`:
 
-register(): Handles user registration.
+1. `login_fun`: Handles user login by fetching registered data from the database. Redirects males to the female profiles page and females to the male profiles page.
 
-login(): Authenticates users and starts a session.
+2. `signup_fun`: Handles user registration.
 
-logout(): Logs out the user and ends the session.
+3. video_view: Likely related to video functionality.
 
-create_profile(): Allows users to add personal details.
+4. home_page: Displays all registered users.
 
-search_profiles(): Filters and displays potential matches.
+5. brides_profiles: Displays only female profiles (photo, name, age, job, and a "See Details" button).
 
-send_message(): Enables users to communicate securely.
+6. grooms_profiles: Displays only male profiles (photo, name, age, job, and a "See Details" button).
 
-admin_dashboard(): Provides administrative control over users and profiles.
+7. bride_details: Shows full details of a bride when clicked from brides_profiles.
+
+8. groom_details: Shows full details of a groom when clicked from grooms_profiles.
+
+9. see_details: Shows complete profile details when accessed from home_page.
+
+10. profile_fun: Allows the currently logged-in user to access, update, and delete their profile.
+
+11. update_profile: Updates the logged-in user's profile.
+
+12. delete_profile: Deletes the logged-in user's profile.
+
+13. search_profiles: Provides search functionality for profiles.
+
+14. logout_fun: Logs out the user.
 
 Additional Notes
+
+The project uses Django ORM for database operations.
+
+It also utilizes Django Template Language (DTL), also known as Jinja language.
 
 Ensure you have Django installed before running the project.
 
@@ -105,11 +124,11 @@ If any errors occur, check the official documentation for troubleshooting.
 
 Secure user data by configuring Django settings properly.
 
-Conclusion
+## Conclusion
 
 This Matrimony Application provides a secure and efficient platform for users to find and communicate with their ideal match. Follow the setup instructions to deploy your application successfully.
 
-Contact
+## Contact
 
 For further inquiries, contact: hemalathank9207@gmail.com
 
