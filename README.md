@@ -68,7 +68,7 @@ Install the required dependencies using pip:
 
 8. **Apply Migrations:**
 
-    python manage.py makemigrations
+    python manage.py makemigrations`
    
     python manage.py migrate`
    
