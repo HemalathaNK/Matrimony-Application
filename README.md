@@ -56,7 +56,7 @@ Install the required dependencies using pip:
 
 4. **Create Django Project & App:**
 
-      `django-admin startproject ProjectName
+       django-admin startproject ProjectName`
    
        django-admin startapp AppName`
 
@@ -68,7 +68,7 @@ Install the required dependencies using pip:
 
 8. **Apply Migrations:**
 
-    `python manage.py makemigrations
+    python manage.py makemigrations
    
     python manage.py migrate`
    
