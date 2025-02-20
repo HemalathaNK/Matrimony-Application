@@ -47,7 +47,7 @@ The Matrimony Application utilizes several libraries and frameworks to handle we
 5. **Django ORM:** – Object-Relational Mapping to interact with the MySQL database.
 7. **Django Template Language (Jinja):** Used for rendering dynamic content in HTML templates.
 
-**Install the required dependencies using** `pip`:
+### Install the required dependencies using `pip`:
 
 Open a terminal or command prompt and run the following command to install all the required libraries:
 
@@ -72,25 +72,22 @@ Once you have a virtual environment activated, run the pip install command menti
 
       `venv\Scripts\activate`
 
-4. **Create Django Project & App:**
 
-       `django-admin startproject ProjectName`
-   
-       `django-admin startapp AppName`
-
-6. **Set up the database:**
+4. **Set up the database:**
 
       Create a MySQL database named MatrimonyDB in MySQL Workbench.
    
       Update settings.py with database credentials.
 
-8. **Apply Migrations:**
+      `pip install mysqlclient`
+
+5. **Apply Migrations:**
 
     `python manage.py makemigrations`
    
    ` python manage.py migrate`
    
-10. **Create a Superuser (For Admin Access):**
+6. **Create a Superuser (For Admin Access):**
 
       `python manage.py createsuperuser`
 
