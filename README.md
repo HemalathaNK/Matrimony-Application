@@ -55,6 +55,11 @@ Open a terminal or command prompt and run the following command to install all t
 
 ### Installation & Setup
 
+#### Using Virtual Environments (Recommended)
+It's highly recommended to create a virtual environment for this project to isolate its dependencies from other Python projects on your system. You can use tools like venv or virtualenv to create a virtual environment. Refer to their documentation for specific instructions.
+
+Once you have a virtual environment activated, run the pip install command mentioned earlier to install the libraries within the isolated environment.
+
 1. **Install Virtual Environment:**
 
       `pip install virtualenv`
