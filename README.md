@@ -93,11 +93,16 @@ Once you have a virtual environment activated, run the pip install command menti
 7. **Configure email settings in `settings.py` for password reset:**
 
       ` EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+   
        EMAIL_HOST = 'smtp.gmail.com'
+   
        EMAIL_PORT = 587
+   
        EMAIL_USE_TLS = True
+   
        EMAIL_HOST_USER = 'your-email@gmail.com'
-       EMAIL_HOST_PASSWORD = 'your-email-password'  
+   
+       EMAIL_HOST_PASSWORD = 'your-email-app-password'  
 `
   
 9. **Run the Server:**
