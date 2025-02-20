@@ -23,8 +23,6 @@ __IDE:__ PyCharm
   
 * **Forgot Password Feature:** Uses Django’s built-in password reset functionality for forgot password.
   
-* **Static and Media File Management:** Static files (CSS, JS) and media files (user profile pictures) are properly configured using static and media files
-
 * **Admin Dashboard:** Admins can manage user profiles and monitor activities.
 
 ## Requirements
@@ -41,11 +39,12 @@ __IDE:__ PyCharm
 The Matrimony Application utilizes several libraries and frameworks to handle web development, database management, and user authentication. Below are the key technologies used:
 
 1. **Django:** Django is a high-level Python web framework that enables rapid development of secure and scalable web applications by following the MVT (Model-View-                        Templates) architecture.
+  
 2. **MySQLClient:** – Python library for connecting Django with the MySQL database.
-3. **Pillow:** Used for handling image uploads 
+ 
+3. **Pillow:** Used for handling image uploads
+
 4. **Virtual Environment:** Used to manage dependencies and isolate the project environment
-5. **Django ORM:** – Object-Relational Mapping to interact with the MySQL database.
-7. **Django Template Language (Jinja):** Used for rendering dynamic content in HTML templates.
 
 ### Install the required dependencies using `pip`:
 
@@ -91,7 +90,17 @@ Once you have a virtual environment activated, run the pip install command menti
 
       `python manage.py createsuperuser`
 
-8. **Run the Server:**
+7. **Configure email settings in `settings.py` for password reset:**
+
+      ` EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+       EMAIL_HOST = 'smtp.gmail.com'
+       EMAIL_PORT = 587
+       EMAIL_USE_TLS = True
+       EMAIL_HOST_USER = 'your-email@gmail.com'
+       EMAIL_HOST_PASSWORD = 'your-email-password'  
+`
+  
+9. **Run the Server:**
 
       `python manage.py runserver`
 
@@ -129,19 +138,25 @@ The application maps functions in `views.py` via `urls.py`:
 
 ## Additional Notes
 
-* The project uses Django ORM for database operations.
+*  Ensure you have Django installed before running the project.
+  
+* The project uses Django ORM (Object-Relational Mapping) for database operations
 
-* It also utilizes Django Template Language (DTL), also known as Jinja language.
+* It also utilizes Django Template Language (DTL), also known as Jinja language which is used for rendering dynamic content in HTML templates.
 
-* Ensure you have Django installed before running the project.
+* Static Files: Used for serving CSS, JavaScript, and other frontend assets.
+  
+* Media Files: Used for storing user-uploaded profile pictures.
+
+* Django provides a built-in password reset feature using Django’s built-in authentication system. To enable this, need to set up email settings in `settings.py`.
 
 * If any errors occur, check the official documentation for troubleshooting.
 
 * Secure user data by configuring Django settings properly.
 
 ## Conclusion
-
-This Matrimony Application provides a secure and efficient platform for users to find and communicate with their ideal match. Follow the setup instructions to deploy your application successfully.
+The Matrimony Application is a secure, user-friendly platform that allows users to create detailed profiles with images and videos.
+Advanced search and filtering features empower users to easily find and connect with their ideal match. Follow the setup instructions to deploy your application successfully.
 
 ## Contact
 
