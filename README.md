@@ -48,6 +48,7 @@ The Matrimony Application utilizes several libraries and frameworks to handle we
 7. **Django Template Language (Jinja):** Used for rendering dynamic content in HTML templates.
 
 **Install the required dependencies using** `pip`:
+
 Open a terminal or command prompt and run the following command to install all the required libraries:
 
 `pip install django pillow mysqlclient virtualenv`
