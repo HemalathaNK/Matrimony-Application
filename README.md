@@ -1,18 +1,17 @@
 # Matrimony Application
 
 ## Overview
-
-This project is a Matrimony Application built using Python and Django for backend operations and HTML, CSS, and JavaScript for the frontend. The application allows users to register, create profiles, search for potential matches, and communicate securely.
+The Matrimony Application is a web-based platform that allows users to register, search for potential matches, and manage their profiles. It is built using Python, Django, MySQL, HTML, CSS, and JavaScript.
 
 ## Technologies Used
 
 __Backend:__ Python, Django
 
-__Frontend:__ HTML, CSS, JavaScript
+__Frontend:__ HTML, CSS, JavaScript, Boostrap
 
 __Database:__ MySQL (via MySQL Workbench)
 
-__IDE:__ VS Code
+__IDE:__ PyCharm
 
 ## Features
 
@@ -30,11 +29,19 @@ __IDE:__ VS Code
 
 **Python 3.x:** Required to run the Django server.
 
-**VS Code:** For coding and development.
+**PyCharm:** For coding and development.
 
 **MySQL Workbench:** To manage MySQL database.
 
 ### Libraries & Packages
+The Matrimony Application utilizes several libraries and frameworks to handle web development, database management, and user authentication. Below are the key technologies used:
+
+1. **Django:** Django is a high-level Python web framework that enables rapid development of secure and scalable web applications by following the MVT (Model-View-                        Templates) architecture.
+2. **MySQLClient:** – Python library for connecting Django with the MySQL database.
+3. **Pillow:** Used for handling image uploads 
+4. **Virtual Environment:** Used to manage dependencies and isolate the project environment
+5. **Django ORM:** – Object-Relational Mapping to interact with the MySQL database.
+7. **Django Template Language (Jinja):** Used for rendering dynamic content in HTML templates.
 
 Install the required dependencies using pip:
 
