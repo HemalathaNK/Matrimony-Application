@@ -20,6 +20,10 @@ __IDE:__ PyCharm
 * **Profile Management:** Users can create and update their profiles with personal details.
 
 * **Search Functionality:** Users can search for matches based on specific filters.
+  
+* **Forgot Password Feature:** Uses Django’s built-in password reset functionality for forgot password.
+  
+* **Static and Media File Management:** Static files (CSS, JS) and media files (user profile pictures) are properly configured using static and media files
 
 * **Admin Dashboard:** Admins can manage user profiles and monitor activities.
 
@@ -44,6 +48,7 @@ The Matrimony Application utilizes several libraries and frameworks to handle we
 7. **Django Template Language (Jinja):** Used for rendering dynamic content in HTML templates.
 
 **Install the required dependencies using** `pip`:
+Open a terminal or command prompt and run the following command to install all the required libraries:
 
 `pip install django pillow mysqlclient virtualenv`
 
