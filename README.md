@@ -43,7 +43,7 @@ The Matrimony Application utilizes several libraries and frameworks to handle we
 5. **Django ORM:** – Object-Relational Mapping to interact with the MySQL database.
 7. **Django Template Language (Jinja):** Used for rendering dynamic content in HTML templates.
 
-Install the required dependencies using pip:
+**Install the required dependencies using** `pip`:
 
 `pip install django pillow mysqlclient virtualenv`
 
