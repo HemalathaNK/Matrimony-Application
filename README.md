@@ -112,7 +112,7 @@ The application maps functions in `views.py` via `urls.py`:
 
 3. `home_page()`: Displays all registered users.
 
-4. `brides_profile()s`: Displays only female profiles 
+4. `brides_profiles()`: Displays only female profiles 
 
 5. `grooms_profiles()`: Displays only male profiles
 
