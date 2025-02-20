@@ -106,31 +106,31 @@ Once you have a virtual environment activated, run the pip install command menti
 
 The application maps functions in `views.py` via `urls.py`:
 
-1. `login_fun`: Handles user login by fetching registered data from the database. Redirects males to the female profiles page and females to the male profiles page.
+1. `signup_fun()`: Handles user registration.
 
-2. `signup_fun`: Handles user registration.
+2. `login_fun()`: Handles user login by fetching registered data from the database. If the logging user is males it will redirects to the `brides_profiles` page or if the                    logging user is females it will redirect to `grooms_profiles` page.
 
-4. `home_page`: Displays all registered users.
+3. `home_page()`: Displays all registered users.
 
-5. `brides_profiles`: Displays only female profiles (photo, name, age, job, and a "See Details" button).
+4. `brides_profile()s`: Displays only female profiles 
 
-6. `grooms_profiles`: Displays only male profiles (photo, name, age, job, and a "See Details" button).
+5. `grooms_profiles()`: Displays only male profiles
 
-7. `bride_details`: Shows full details of a bride when clicked from brides_profiles.
+6. `bride_details()`: Shows full details of a bride when clicked on `Details` button in `brides_profiles`.
 
-8. `groom_details`: Shows full details of a groom when clicked from grooms_profiles.
+7. `groom_details()`: Shows full details of a groom when clicked on `Details` button in `grooms_profiles`.
 
-9. `see_details`: Shows complete profile details when accessed from home_page.
+8. `see_details()`: Shows complete profile details when accessed from `home_page`.
 
-10. `profile_fun`: Allows the currently logged-in user to access, update, and delete their profile.
+9. `profile_fun()`: Allows the currently logged-in user to access, update, and delete their profile.
 
-11. `update_profile`: Updates the logged-in user's profile.
+10. `update_profile()`: Updates the logged-in user's profile.
 
-12. `delete_profile`: Deletes the logged-in user's profile.
+11. `delete_profile()`: Deletes the logged-in user's profile.
 
-13. `search_profiles`: Provides search functionality for profiles.
+12. `search_profiles()`: Provides search functionality for profiles.
 
-14. `logout_fun`: Logs out the user.
+13. `logout_fun()`: Logs out the user.
 
 ## Additional Notes
 
